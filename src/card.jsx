@@ -6,9 +6,10 @@ function Card({ result }) {
     }
     return (
         <div>
-            {result.map(item => (<>
-                <p key={item.id}>{item.name}</p>
-                <img src={item.image}/>
+            {result.map(({id,name,email,image}) => (<>
+                <p key={id}>{name}</p>
+                <p>{email}</p>
+                <img src={image}/>
             </>))}
         </div>
     )
